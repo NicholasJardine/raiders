@@ -1,16 +1,62 @@
-<div>
+<div class= "container">
+
+  <div class="row">
+
+<div class="col-8">
+
               <%= simple_form_for [@form] do |f| %>
               <div class="form_inputs">
-                <div class="">
+              <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Cough</p>
+                  <%= f.check_box :cough, label: "Cough", class: "big-box"%>
+                </div>
+                                <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Fever</p>
+                  <%= f.check_box :fever, label: "Cough", class: "big-box"%>
+                </div>
+                                <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Loss of sense of smell</p>
+                  <%= f.check_box :sense_of_smell, label: "Cough", class: "big-box"%>
+                </div>
 
-      <p style="color:#CCA459;"> Human trafficking</p>
+                              <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Loss of sense of taste</p>
+                  <%= f.check_box :sense_of_taste, label: "Cough", class: "big-box"%>
+                </div>
 
-                 <%= f.check_box :cough, label: "Cough", class: "big-box"%>
+                                <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Sore throat</p>
+                  <%= f.check_box :sore_throat, label: "Cough", class: "big-box"%>
+                </div>
 
-    </div>
-        <%= f.button :submit, class: "btn btn-flat-orange", value: "Create Article" %>
+                                <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Awaiting Results of a covid test</p>
+                  <%= f.check_box :awaiting_results, label: "Cough", class: "big-box"%>
+                </div>
+
+                                <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Been in contact in the last 2 weeks</p>
+                  <%= f.check_box :past_two_weeks, label: "Cough", class: "big-box"%>
+                </div>
+
+                                <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Shortness of Breath</p>
+                  <%= f.check_box :shortness_of_breath, label: "Cough", class: "big-box"%>
+                </div>
+
+                                <div class="d-flex" style="justify-content: space-between;">
+                  <%= f.hidden_field :user_id, value: @user.id%>
+                </div>
+
+        <%= f.button :submit, class: "btn btn-flat-orange", value: "Submit Form" %>
 <% end %>
 
             </div>
+
+
+</div>
+
+  </div>
+
           </div>
 
