@@ -5,7 +5,10 @@
 
     </div>
 <% if user_signed_in? %>
-  <%= link_to "Click here to fill out the covid form" %>
+<div class="col-12">
+
+ <h3>    <%= link_to "Click here to fill out the covid form", new_covid_form_path %>  </h3>
+</div>
 <% else %>
       <div class="col-12" style="position: relative; margin: 0 auto;">
       <h1 style="text-align:center; padding-top:48px; padding-bottom: 48px; font-size:3.5rem; font-weight:700;">Login to fill out your covid form</h1>
