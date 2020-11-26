@@ -1,0 +1,31 @@
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6" style="position: relative; margin:0 auto; padding-top: 166px;">
+<h2 style="padding-bottom: 56px;">Log in</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-inputs">
+
+        <%= f.input :id_number, label: "ID number"%>
+
+<!--     <%= f.input :id_number,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "email" } %> -->
+    <%= f.input :password,
+                required: false,
+                input_html: { autocomplete: "current-password" } %>
+    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Log in" %>
+  </div>
+<% end %>
+
+    </div>
+  </div>
+</div>
