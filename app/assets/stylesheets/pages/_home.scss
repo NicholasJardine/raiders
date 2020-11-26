@@ -1,1 +1,11 @@
-// Specific CSS for your home-page
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fill img {
+    flex-shrink: 1;
+    min-width: 100%;
+    height: 350px;
+}

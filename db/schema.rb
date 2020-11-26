@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_26_074824) do
+ActiveRecord::Schema.define(version: 2020_11_26_101939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "covid_forms", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "past_two_weeks", default: false
+    t.boolean "fever", default: false
+    t.boolean "cough", default: false
+    t.boolean "shortness_of_breath", default: false
+    t.boolean "sense_of_smell", default: false
+    t.boolean "sense_of_taste", default: false
+    t.boolean "sore_throat", default: false
+    t.boolean "awaiting_results", default: false
+    t.index ["user_id"], name: "index_covid_forms_on_user_id"
+  end
 
   create_table "drinks", force: :cascade do |t|
     t.string "name"
@@ -45,4 +60,5 @@ ActiveRecord::Schema.define(version: 2020_11_26_074824) do
     t.index ["reset_password_token"], name: "index_views_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "covid_forms", "users"
 end
