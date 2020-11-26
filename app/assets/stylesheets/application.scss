@@ -10,4 +10,10 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/footer";
 @import "pages/index";
+
+
+.wrapper{
+  min-height: calc(100vh - 120px);
+}
