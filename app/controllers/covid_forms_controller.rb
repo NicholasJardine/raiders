@@ -1,0 +1,2 @@
+class CovidFormsController < ApplicationController
+end
