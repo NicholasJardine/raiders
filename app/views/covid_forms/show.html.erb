@@ -11,30 +11,33 @@
 
 </div>
 
-<div class="col-12">
 
-                  <% if @form.temp? %>
-                  <h2>Temperature:</h2>
-                    <h3 style="color:#CCA459;"> <%= @form.temp %> degrees celcius</h3>
+<div class="col-12">
+<h2 class="my-5" style="font-size:2.5rem; color:#266299;">The player is presenting the following symptoms:</h2>
+
+   <% if @form.temp? %><div class=" col-6 d-flex my-5"style= "justify-content: space-between;">
+
+                  <h2 style="margin-left: -20px;">Temperature:</h2>
+                    <h3 style="color:black;"> <%= @form.temp %> degrees celcius</h3>
+   </div>
                   <% end %>
-<h2>The player is presenting the following symptoms:</h2>
                 <% if @form.cough? %>
               <div class="" style="">
-                  <h3 style="color:#CCA459;"> Cough</h3>
+                  <h3 style="color:black;"> Cough</h3>
                 </div>
 
                 <% end %>
 
                 <% if @form.fever? %>
                 <div class="" style="">
-                  <h3 style="color:#CCA459;"> Fever</h3>
+                  <h3 style="color:black;"> Fever</h3>
                 </div>
                 <% end %>
 
 
                 <% if @form.sense_of_smell? %>
                   <div class="" style="">
-                  <h3 style="color:#CCA459;"> Loss of sense of smell</h3>
+                  <h3 style="color:black;"> Loss of sense of smell</h3>
                 </div>
 
                 <% end %>
@@ -42,21 +45,21 @@
 
                 <% if @form.sense_of_taste? %>
                               <div class="" style="">
-                  <h3 style="color:#CCA459;"> Loss of sense of taste</h3>
+                  <h3 style="color:black;"> Loss of sense of taste</h3>
                 </div>
 
                 <% end %>
 
                 <% if @form.sore_throat? %>
                                 <div class="" style="">
-                  <h3 style="color:#CCA459;"> Sore throat</h3>
+                  <h3 style="color:black;"> Sore throat</h3>
                 </div>
 
                 <% end %>
 
                   <% if @form.awaiting_results? %>
                                 <div class="" style="">
-                  <h3 style="color:#CCA459;"> Awaiting Results of a covid test</h3>
+                  <h3 style="color:black;"> Awaiting Results of a covid test</h3>
                 </div>
 
                   <% end %>
@@ -65,26 +68,88 @@
 
                   <% if @form.past_two_weeks? %>
                                 <div class="" style="">
-                  <h3 style="color:#CCA459;"> Been in contact in the last 2 weeks</h3>
+                  <h3 style="color:black;"> Been in contact in the last 2 weeks</h3>
                 </div>
 
                   <% end %>
 
                 <% if @form.shortness_of_breath? %>
                                 <div class="" style="">
-                  <h3 style="color:#CCA459;"> Shortness of Breath</h3>
+                  <h3 style="color:black;"> Shortness of Breath</h3>
                 </div>
 
                   <% end %>
 
 
 
-
-
-
-
 </div>
 
+<!-- <div class="col-12">
+<h2 class="my-5" style="font-size:2.5rem; color:#266299;">The player is not presenting the following symptoms:</h2>
+
+     <% if not @form.temp? %>
+                  <h2>Temperature:</h2>
+                    <h3 style="color:black;"> <%= @form.temp %> degrees celcius</h3>
+                  <% end %>
+                <% if not @form.cough? %>
+              <div class="" style="">
+                  <h3 style="color:black;"> Cough</h3>
+                </div>
+
+                <% end %>
+
+                <% if not @form.fever? %>
+                <div class="" style="">
+                  <h3 style="color:black;"> Fever</h3>
+                </div>
+                <% end %>
+
+
+                <% if not @form.sense_of_smell? %>
+                  <div class="" style="">
+                  <h3 style="color:black;"> Loss of sense of smell</h3>
+                </div>
+
+                <% end %>
+
+
+                <% if not @form.sense_of_taste? %>
+                              <div class="" style="">
+                  <h3 style="color:black;"> Loss of sense of taste</h3>
+                </div>
+
+                <% end %>
+
+                <% if not @form.sore_throat? %>
+                                <div class="" style="">
+                  <h3 style="color:black;"> Sore throat</h3>
+                </div>
+
+                <% end %>
+
+                  <% if not @form.awaiting_results? %>
+                                <div class="" style="">
+                  <h3 style="color:black;"> Awaiting Results of a covid test</h3>
+                </div>
+
+                  <% end %>
+
+
+
+                  <% if not @form.past_two_weeks? %>
+                                <div class="" style="">
+                  <h3 style="color:black;"> Been in contact in the last 2 weeks</h3>
+                </div>
+
+                  <% end %>
+
+                <% if not @form.shortness_of_breath? %>
+                                <div class="" style="">
+                  <h3 style="color:black;"> Shortness of Breath</h3>
+                </div>
+
+                  <% end %>
+</div> -->
   </div>
 
           </div>
