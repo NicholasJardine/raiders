@@ -6,12 +6,13 @@
     </div>
 <% if user_signed_in? %>
 <div class="col-12">
+  <p style="text-align: center; padding-left:56px; font-size:1.5rem; margin-bottom: -32px; margin-top: 40px;">Tap the button to fill out your covid form</p>
 
- <h3>    <%= link_to "Click here to fill out the covid form", new_covid_form_path %>  </h3>
+ <p style="position: relative; margin:0 auto; text-align: center; padding-top: 56px; font-size:2.0rem; padding-left:56px;">    <%= link_to "Covid Form", new_covid_form_path, class: "btn-flat-raiders-gold" %>  </p>
 </div>
 <% else %>
       <div class="col-12" style="position: relative; margin: 0 auto;">
-      <h1 style="text-align:center; padding-top:48px; padding-bottom: 48px; font-size:3.5rem; font-weight:700;">Login to fill out your covid form</h1>
+      <p style="text-align:center; padding-top:48px; padding-bottom: 48px; font-size:2.0rem; font-weight:700; padding-left:64px; ">Login to fill out your covid form</p>
     </div>
 <% end %>
   </div>

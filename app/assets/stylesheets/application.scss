@@ -34,21 +34,37 @@
 
 
 .btn-flat-raiders{
-  color: black;
+  color: white;
   padding: 8px 24px;
   border-radius: 2px;
-  background: #266299;;
+  background: #5E478A;
   text-align: center;
   font-weight:bold;
   width: 200px;
 }
 
 .btn-flat-raiders-search{
-  color: black;
+  color: white;
   padding: 8px 24px;
   border-radius: 2px;
-  background: #266299;;
+  background: #5E478A;;
   text-align: center;
   font-weight:bold;
   width: 100px;
+}
+
+
+.btn-flat-raiders-gold{
+  color: black;
+  padding: 8px 24px;
+  border-radius: 2px;
+  background: #EF9938;;
+  text-align: center;
+  font-weight:bold;
+  width: 100px;
+}
+
+
+label{
+  font-size:1.5rem;
 }
