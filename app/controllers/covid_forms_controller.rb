@@ -28,7 +28,7 @@ end
     private
 
   def covid_form_params
-    params.require(:covid_form).permit(:user_id, :sore_throat, :shortness_of_breath, :sense_of_taste, :sense_of_taste, :cough, :awaiting_results, :past_two_weeks, :fever)
+    params.require(:covid_form).permit(:user_id, :sore_throat, :shortness_of_breath, :sense_of_taste, :sense_of_taste, :cough, :awaiting_results, :past_two_weeks, :fever, :temp, )
   end
 
 end
