@@ -1,9 +1,12 @@
 <div class= "container">
 
   <div class="row" style="margin-top: 56px; ">
-    <h2 style="margin-bottom:56px;">Please tick the boxes that describe your symptoms. Only fill in your temperature after having it taken by a covid official. </h2>
+    <div class="col-12 ">
 
-<div class="col-8">
+    <h2 style="margin-bottom:56px;">Tick the boxes that describe your symptoms. Leave the box empty if you do not have that symptom. </h2>
+    </div>
+
+<div class="col-8" style="position: relative;margin:0 auto;">
 
               <%= simple_form_for [@form] do |f| %>
               <div class="form_inputs">
