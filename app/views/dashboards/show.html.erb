@@ -6,7 +6,12 @@
 
       <% @covid_forms.each do |form| %>
       <%= link_to covid_form_path(form) do %>
+      <% if form.date? %>
+       <p>  <%= form.date %> </p>
+      <% else %>
+
       <p>Covid form</p>
+      <% end %>
         <% end %>
         <% end %>
     </div>
