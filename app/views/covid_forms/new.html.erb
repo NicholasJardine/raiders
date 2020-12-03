@@ -1,50 +1,52 @@
 <div class= "container">
 
   <div class="row" style="margin-top: 56px; ">
-    <div class="col-12 ">
+    <div class="col-8 " style="position: relative; margin:0 auto; color: blue;">
 
-    <h2 style="margin-bottom:56px;">Tick the boxes that describe your symptoms. Leave the box empty if you do not have that symptom. </h2>
+    <h2 style="margin-bottom:56px;"> Place a <i class="fas fa-check"  style="padding-right: 20px; padding-left: 20px;"></i> in the boxes that describe your symptoms. Leave the box empty if you do not have that symptom. </h2>
     </div>
 
-<div class="col-8" style="position: relative;margin:0 auto;">
 
+
+<div class="col-8" style="position: relative;margin:0 auto;">
+<h1 style="padding-bottom: 40px;">My Symptoms</h1>
               <%= simple_form_for [@form] do |f| %>
               <div class="form_inputs">
               <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Cough</p>
+                  <p style="color:#black; font-size: 1.5rem;"> Cough</p>
                   <%= f.check_box :cough, label: "Cough", class: "big-box form-l"%>
                 </div>
                                 <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Fever</p>
+                  <p style="color:#black; font-size: 1.5rem;"> Fever</p>
                   <%= f.check_box :fever, label: "Cough", class: "big-box"%>
                 </div>
                                 <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Loss of sense of smell</p>
+                  <p style="color:#black; font-size: 1.5rem;"> Loss of sense of smell</p>
                   <%= f.check_box :sense_of_smell, label: "Cough", class: "big-box"%>
                 </div>
 
                               <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Loss of sense of taste</p>
+                  <p style="color:#black; font-size: 1.5rem;"> Loss of sense of taste</p>
                   <%= f.check_box :sense_of_taste, label: "Cough", class: "big-box"%>
                 </div>
 
                                 <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Sore throat</p>
+                  <p style="color:#black; font-size: 1.5rem;"> Sore throat</p>
                   <%= f.check_box :sore_throat, label: "Cough", class: "big-box"%>
                 </div>
 
                                 <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Awaiting Results of a covid test</p>
+                  <p style="color:#black; font-size: 1.5rem;"> Awaiting Results of a covid test</p>
                   <%= f.check_box :awaiting_results, label: "Cough", class: "big-box"%>
                 </div>
 
                                 <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Been in contact in the last 2 weeks</p>
+                  <p style="color:#black; font-size: 1.5rem;"> Been in contact in the last 2 weeks</p>
                   <%= f.check_box :past_two_weeks, label: "Cough", class: "big-box"%>
                 </div>
 
                                 <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Shortness of Breath</p>
+                  <p style="color:#black; font-size: 1.5rem;"> Shortness of Breath</p>
                   <%= f.check_box :shortness_of_breath, label: "Cough", class: "big-box"%>
                 </div>
 
