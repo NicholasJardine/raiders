@@ -4,51 +4,59 @@
 <div class= "container">
 
   <div class="row" style="margin-top: 56px; ">
-    <h2 style="margin-bottom:56px;"><%= @user.name.capitalize %> </h2>
 
 <div class="col-8">
 
-              <div class="form_inputs">
+    <h2 style="margin-bottom:56px;">Player Name: <%= @user.name.capitalize %> </h2>
 
+</div>
+
+<div class="col-12">
+
+                  <% if @form.temp? %>
+                  <h2>Temperature:</h2>
+                    <h3 style="color:#CCA459;"> <%= @form.temp %> degrees celcius</h3>
+                  <% end %>
+<h2>The player is presenting the following symptoms:</h2>
                 <% if @form.cough? %>
-              <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Cough</p>
+              <div class="" style="">
+                  <h3 style="color:#CCA459;"> Cough</h3>
                 </div>
 
                 <% end %>
 
                 <% if @form.fever? %>
-                <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Fever</p>
+                <div class="" style="">
+                  <h3 style="color:#CCA459;"> Fever</h3>
                 </div>
                 <% end %>
 
 
                 <% if @form.sense_of_smell? %>
-                  <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Loss of sense of smell</p>
+                  <div class="" style="">
+                  <h3 style="color:#CCA459;"> Loss of sense of smell</h3>
                 </div>
 
                 <% end %>
 
 
                 <% if @form.sense_of_taste? %>
-                              <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Loss of sense of taste</p>
+                              <div class="" style="">
+                  <h3 style="color:#CCA459;"> Loss of sense of taste</h3>
                 </div>
 
                 <% end %>
 
                 <% if @form.sore_throat? %>
-                                <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Sore throat</p>
+                                <div class="" style="">
+                  <h3 style="color:#CCA459;"> Sore throat</h3>
                 </div>
 
                 <% end %>
 
                   <% if @form.awaiting_results? %>
-                                <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Awaiting Results of a covid test</p>
+                                <div class="" style="">
+                  <h3 style="color:#CCA459;"> Awaiting Results of a covid test</h3>
                 </div>
 
                   <% end %>
@@ -56,28 +64,23 @@
 
 
                   <% if @form.past_two_weeks? %>
-                                <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Been in contact in the last 2 weeks</p>
+                                <div class="" style="">
+                  <h3 style="color:#CCA459;"> Been in contact in the last 2 weeks</h3>
                 </div>
 
                   <% end %>
 
                 <% if @form.shortness_of_breath? %>
-                                <div class="d-flex" style="justify-content: space-between;">
-                  <p style="color:#CCA459;"> Shortness of Breath</p>
+                                <div class="" style="">
+                  <h3 style="color:#CCA459;"> Shortness of Breath</h3>
                 </div>
 
                   <% end %>
 
 
-                  <% if @form.temp? %>
-                    <p> <%= @user.temp %> </p>
-                  <% end %>
 
 
 
-
-            </div>
 
 
 </div>
