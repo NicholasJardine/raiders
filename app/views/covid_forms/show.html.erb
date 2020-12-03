@@ -1,0 +1,88 @@
+
+
+
+<div class= "container">
+
+  <div class="row" style="margin-top: 56px; ">
+    <h2 style="margin-bottom:56px;"><%= @user.name.capitalize %> </h2>
+
+<div class="col-8">
+
+              <div class="form_inputs">
+
+                <% if @form.cough? %>
+              <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Cough</p>
+                </div>
+
+                <% end %>
+
+                <% if @form.fever? %>
+                <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Fever</p>
+                </div>
+                <% end %>
+
+
+                <% if @form.sense_of_smell? %>
+                  <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Loss of sense of smell</p>
+                </div>
+
+                <% end %>
+
+
+                <% if @form.sense_of_taste? %>
+                              <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Loss of sense of taste</p>
+                </div>
+
+                <% end %>
+
+                <% if @form.sore_throat? %>
+                                <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Sore throat</p>
+                </div>
+
+                <% end %>
+
+                  <% if @form.awaiting_results? %>
+                                <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Awaiting Results of a covid test</p>
+                </div>
+
+                  <% end %>
+
+
+
+                  <% if @form.past_two_weeks? %>
+                                <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Been in contact in the last 2 weeks</p>
+                </div>
+
+                  <% end %>
+
+                <% if @form.shortness_of_breath? %>
+                                <div class="d-flex" style="justify-content: space-between;">
+                  <p style="color:#CCA459;"> Shortness of Breath</p>
+                </div>
+
+                  <% end %>
+
+
+                  <% if @form.temp? %>
+                    <p> <%= @user.temp %> </p>
+                  <% end %>
+
+
+
+
+            </div>
+
+
+</div>
+
+  </div>
+
+          </div>
+
