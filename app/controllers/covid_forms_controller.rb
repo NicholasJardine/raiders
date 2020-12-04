@@ -12,6 +12,15 @@ class CovidFormsController < ApplicationController
     # @item = covid_form.create!(video: video["url"], title: @covid_form.title, brief_id: @covid_form.brief_id)
     # @covid_form.user_id = current_user.id
 
+    if (not @covid_form.cough?) && (not @covid_form.fever? )&& (not @covid_form.sense_of_taste?) && (not @covid_form.sense_of_smell?) && (not @covid_form.shortness_of_breath?) && (not @covid_form.past_two_weeks?) && (not @covid_form.sore_throat?) && (not @covid_form.awaiting_results?) && (not @covid_form.temp > 36.8)
+
+      @covid_form.status = "Clear"
+    else
+      @covid_form.status = "Flagged"
+
+      @covid_form.save
+    end
+
     if @covid_form.save
       redirect_to covid_form_path(@covid_form)
       # render json: item
@@ -28,7 +37,7 @@ end
     private
 
   def covid_form_params
-    params.require(:covid_form).permit(:user_id, :sore_throat, :shortness_of_breath, :sense_of_taste, :sense_of_taste, :cough, :awaiting_results, :past_two_weeks, :fever, :temp, :date)
+    params.require(:covid_form).permit(:user_id, :sore_throat, :shortness_of_breath, :sense_of_taste, :sense_of_taste, :cough, :awaiting_results, :past_two_weeks, :fever, :temp, :date, :status)
   end
 
 end
