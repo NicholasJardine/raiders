@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_03_113835) do
+ActiveRecord::Schema.define(version: 2020_12_04_144639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_113835) do
     t.boolean "awaiting_results", default: false
     t.float "temp"
     t.date "date"
+    t.string "status", default: "Pending"
     t.index ["user_id"], name: "index_covid_forms_on_user_id"
   end
 
