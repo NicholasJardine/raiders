@@ -2,12 +2,36 @@
   <div class="row">
     <div class="col-12" style="margin:0 auto; position: relative;">
 
-      <h1 class="my-5"> By Clicking on a particular date below, you have access to the records of each player that presented symptoms on a particular day</h1>
+      <h1 class="my-5"> By Clicking on a particular date below, you have access to the records of each player that presented symptoms on a that day</h1>
     </div>
     <div class="col-8">
 <% @flags_with_dates.each do |key, array| %>
-<p> <%= key %>  </p>
-<% end %>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  <p> <%= key %>  </p>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Flagged Players</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <% array.each do |flag| %>
+        <% link_to covid_form_path(flag.covid_form_id) do  %>
+        <p> <%= flag.user.name %> </p>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div><% end %>
     </div>
   </div>
 </div>
