@@ -8,7 +8,13 @@
 <div class="col-8" style="">
 
         <h2 style="margin-bottom:24px;">Date: <%= @form.date %> </h2>
+        <% if @user == @form.user %>
     <h2 style="margin-bottom:56px;">Player Name: <%= @user.name.capitalize %> </h2>
+    <% else %>
+
+        <h2 style="margin-bottom:56px;">Player Name: <%= @form.user.name.capitalize %> </h2>
+
+        <% end %>
 
 </div>
 

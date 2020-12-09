@@ -23,7 +23,7 @@
       <div class="modal-body">
         <% array.each do |flag| %>
        <p> <%= flag.user.name %> </p>
-       <%= link_to "View symptoms", covid_form_path(flag.covid_form_id) %>
+       <%= link_to "View symptoms", covid_form_path(flag.covid_form) %>
         <% end %>
       </div>
       <div class="modal-footer">
