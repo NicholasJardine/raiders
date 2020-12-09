@@ -1,0 +1,2 @@
+class LogDatesController < ApplicationController
+end

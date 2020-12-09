@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_09_092014) do
+ActiveRecord::Schema.define(version: 2020_12_09_092456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,16 @@ ActiveRecord::Schema.define(version: 2020_12_09_092014) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "flags", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "log_date_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "status", default: "Pending"
+    t.index ["log_date_id"], name: "index_flags_on_log_date_id"
+    t.index ["user_id"], name: "index_flags_on_user_id"
   end
 
   create_table "log_dates", force: :cascade do |t|
@@ -80,5 +90,7 @@ ActiveRecord::Schema.define(version: 2020_12_09_092014) do
   end
 
   add_foreign_key "covid_forms", "users"
+  add_foreign_key "flags", "log_dates"
+  add_foreign_key "flags", "users"
   add_foreign_key "log_dates", "users"
 end
