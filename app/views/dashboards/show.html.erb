@@ -2,7 +2,14 @@
   <div class="row">
     <div class="col-12 col-lg-8">
 
-      <h3 style="padding-top: 40px;"> Past forms for <%= @u %></h3>
+      <h3 style="padding-top: 40px;"> Past forms for <%= @user.name %></h3>
+      <div>
+        <% @covid_forms.each do |form| %>
+        <%= link_to covid_form_path(form) do %>
+       <p> <%= form.date %></p>
+       <% end %>
+       <% end %>
+      </div>
     </div>
   </div>
 </div>
