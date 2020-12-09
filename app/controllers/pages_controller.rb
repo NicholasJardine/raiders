@@ -10,7 +10,7 @@ class PagesController < ApplicationController
 
 
 
-    def not
+    def not_here
       @user= current_user
        @drinks = Drink.all
     end
@@ -19,4 +19,12 @@ class PagesController < ApplicationController
       @user= current_user
        @drinks = Drink.all
     end
+
+private
+
+  def authenticate_admin!
+  authenticate_user!
+  redirect_to :not, status: :forbidden unless current_user.admin?
+end
+
 end

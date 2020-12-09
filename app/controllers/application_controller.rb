@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
 def authenticate_admin!
   authenticate_user!
-  redirect_to :not, status: :forbidden unless current_user.admin?
+  redirect_to 'pages/not', status: :forbidden unless current_user.admin?
 end
 
 
@@ -22,7 +22,7 @@ end
     devise_parameter_sanitizer.permit(:sign_up){|u| u.permit(:identity, :name, :password, :id_number, :email) }
 
     devise_parameter_sanitizer.permit(:sign_in) {|u| u.permit(:identity, :email, :password, :name, :id_number)}
-    devise_parameter_sanitizer.permit(:account_update) {|u| u.permit( :identity, :email, :password, :password_confirmation, :current_password, :id_number)}
+    devise_parameter_sanitizer.permit(:account_update) {|u| u.permit( :identity, :email, :password, :password_confirmation, :current_password, :id_number,:admin)}
   end
 
 end
