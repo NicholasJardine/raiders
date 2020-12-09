@@ -20,7 +20,7 @@ class PagesController < ApplicationController
       @user= current_user
        @drinks = Drink.all
        @flags = Flag.all
-       @flags_with_dates = @flags.group_by{|flag| [flag.date]}
+       @flags_with_dates = @flags.group_by{|flag| flag.date}
 
 
       end
