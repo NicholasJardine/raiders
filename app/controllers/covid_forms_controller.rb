@@ -17,11 +17,11 @@ class CovidFormsController < ApplicationController
 
       if (not @covid_form.cough?) && (not @covid_form.fever? )&& (not @covid_form.sense_of_taste?) && (not @covid_form.sense_of_smell?) && (not @covid_form.shortness_of_breath?) && (not @covid_form.past_two_weeks?) && (not @covid_form.sore_throat?) && (not @covid_form.awaiting_results?) && (not @covid_form.temp > 36.8)
         @logdate = LogDate.create!(date: @covid_form.date, user_id: @user.id)
-        @flag = Flag.create!(status: "Clear", user_id: @user.id, log_date_id: @logdate.id )
+        @flag = Flag.create!(status: "Clear", user_id: @user.id, log_date_id: @logdate.id, date: @covid_form.date )
         redirect_to covid_form_path(@covid_form)
       else
         @logdate = LogDate.create!(date: @covid_form.date, user_id: @user.id)
-        @flag = Flag.create!(status: "Flagged", user_id: @user.id, log_date_id: @logdate.id )
+        @flag = Flag.create!(status: "Flagged", user_id: @user.id, log_date_id: @logdate.id,  date: @covid_form.date  )
         redirect_to covid_form_path(@covid_form)
       end
 

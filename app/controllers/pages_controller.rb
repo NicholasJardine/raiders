@@ -18,6 +18,8 @@ class PagesController < ApplicationController
         def team_records
       @user= current_user
        @drinks = Drink.all
+       @flags = Flag.all
+       @flags_with_dates = @flags.group_by(:date)
     end
 
 private
