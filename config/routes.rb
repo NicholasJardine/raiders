@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :covid_forms
   resources :dashboards,  only:[:show]
   get 'dashboards/show'
+  get 'pages/not'
+  get 'pages/team_records'
   resources :flags
   resources :log_dates
 
