@@ -5,7 +5,9 @@
       <h1 class="my-5"> By Clicking on a particular date below, you have access to the records of each player that presented symptoms on a particular day</h1>
     </div>
     <div class="col-8">
-
+<% @flags_with_dates.each do |key, array| %>
+<p> <%= key %>  </p>
+<% end %>
     </div>
   </div>
 </div>

@@ -15,12 +15,14 @@ class PagesController < ApplicationController
        @drinks = Drink.all
     end
 
-        def team_records
+
+    def team_records
       @user= current_user
        @drinks = Drink.all
        @flags = Flag.all
        @flags_with_dates = @flags.group_by{|flag| [flag.date]}
-    end
+      end
+
 
 private
 
