@@ -2,6 +2,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :identity, presence: true
   validates :identity, uniqueness: true
+  has_many :log_dates
 
   has_many :covid_forms
   # Include default devise modules. Others available are:
