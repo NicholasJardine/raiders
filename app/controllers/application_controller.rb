@@ -6,6 +6,13 @@ class ApplicationController < ActionController::Base
 
   protected
 
+def authenticate_admin!
+  authenticate_user!
+  redirect_to :not, status: :forbidden unless current_user.admin?
+end
+
+
+
    def email_required?
         false
    end
