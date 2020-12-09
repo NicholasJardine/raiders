@@ -6,14 +6,21 @@
     </div>
     <div class="col-8">
 <% @flags_with_dates.each do |key, array| %>
-  <p> <%= key %>  </p>
 
+<div>
+
+</div>
+
+  <p style="font-weight:700; font-size: 1.5rem;"> <%= key %>  </p>
         <% array.each do |flag| %>
+<div class= "d-flex" style="justify-content: space-between;">
         <p> <%= flag.user.name %> </p>
         <%= link_to "view form", covid_form_path(flag.covid_form_id) %>
+</div>
         <% end %>
 
-</div><% end %>
+<% end %>
+</div>
     </div>
   </div>
 </div>
