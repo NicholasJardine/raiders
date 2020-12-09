@@ -19,9 +19,13 @@
       <p class="nav-item active">
         <%= link_to "My Records", dashboards_show_path, class: "nav-link" %>
       </p>
+
+      <% if current_user.admin? %>
             <p class="navbar-item">
         <%= link_to "Team Records", pages_team_records_path, class: "nav-link" %>
       </p>
+
+      <% end %>
 
 
     <li class="nav-item dropdown" style="list-style-type: none;">

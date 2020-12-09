@@ -24,7 +24,7 @@ private
 
   def authenticate_admin!
   authenticate_user!
-  redirect_to :not, status: :forbidden unless current_user.admin?
+  redirect_to "not_here", status: :forbidden unless current_user.admin?
 end
 
 end
