@@ -22,8 +22,12 @@
       </div>
       <div class="modal-body">
         <% array.each do |flag| %>
+        <div class="my-3 d-flex" style="justify-content: space-between;">
+
        <p> <%= flag.user.name %> </p>
        <%= link_to "View symptoms", covid_form_path(flag.covid_form) %>
+
+        </div>
         <% end %>
       </div>
       <div class="modal-footer">
