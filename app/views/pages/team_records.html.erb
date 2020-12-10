@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12" style="margin:0 auto; position: relative;">
 
-      <h1 class="my-5"> By Clicking on a particular date below, you have access to the records of each player that presented symptoms on a that day</h1>
+      <h1 class="my-5"> Below is the list of players that were flagged on a particular day. you can view the symptoms they presented by clicking "View Form"</h1>
     </div>
     <div class="col-8">
 <% @flags_with_dates.each do |key, array| %>
@@ -15,7 +15,7 @@
         <% array.each do |flag| %>
 <div class= "d-flex" style="justify-content: space-between;">
         <p> <%= flag.user.name %> </p>
-        <%= link_to "view form", covid_form_path(flag.covid_form_id) %>
+        <%= link_to "View Form", covid_form_path(flag.covid_form_id) %>
 </div>
         <% end %>
 
